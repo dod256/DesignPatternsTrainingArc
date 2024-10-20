@@ -155,11 +155,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DesignPatternsTrainingArc.cpp" />
-    <ClCompile Include="Factory.cpp" />
+    <ClCompile Include="FactoryMethodShowcase.cpp" />
     <ClCompile Include="Singleton.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Factory.h" />
+    <ClInclude Include="FactoryMethodShowcase.h" />
     <ClInclude Include="Singleton.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

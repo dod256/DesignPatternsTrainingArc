@@ -30,7 +30,7 @@ class AmmoPowerUp : public PowerUp {
     std::string GetDescription() override;
 };
 
-class Factory {
+class FactoryMethodShowcase {
 public:
     std::unique_ptr<PowerUp> FactoryMethod(PowerUpType type);
 };

@@ -3,7 +3,7 @@
 #include <mutex>
 #include <vector>
 
-#include "Factory.h"
+#include "FactoryMethodShowcase.h"
 #include "Singleton.h"
 
 void TestSingleton() {
@@ -27,13 +27,13 @@ void TestSingleton() {
 }
 
 void TestFactory() {
-    Factory factory;
+    FactoryMethodShowcase factory;
     auto incorrectPowerUp = factory.FactoryMethod(ARMOR);
     assert(!incorrectPowerUp);
     auto correctPowerUp = factory.FactoryMethod(HEALTH);
     assert(correctPowerUp);
     assert(correctPowerUp->GetName() == "Health Power Up");
-    std::cout << "Factory tests have passed\n";
+    std::cout << "Factory method tests have passed\n";
 }
 
 int main(int argc, char* argv[])

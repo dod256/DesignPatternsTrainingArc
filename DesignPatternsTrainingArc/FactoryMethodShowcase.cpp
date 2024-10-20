@@ -1,4 +1,4 @@
-#include "Factory.h"
+#include "FactoryMethodShowcase.h"
 
 std::string HealthPowerUp::GetName() {
     return "Health Power Up";
@@ -16,7 +16,7 @@ std::string AmmoPowerUp::GetDescription() {
     return "Refills ammo.";
 }
 
-std::unique_ptr<PowerUp> Factory::FactoryMethod(const PowerUpType type) {
+std::unique_ptr<PowerUp> FactoryMethodShowcase::FactoryMethod(const PowerUpType type) {
     switch(type) {
     case HEALTH:
         return std::make_unique<HealthPowerUp>();
