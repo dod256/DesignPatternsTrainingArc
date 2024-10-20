@@ -3,6 +3,7 @@
 #include <mutex>
 #include <vector>
 
+#include "AbstractFactory.h"
 #include "FactoryMethodShowcase.h"
 #include "Singleton.h"
 
@@ -26,7 +27,7 @@ void TestSingleton() {
     std::cout << "Singleton tests have passed\n";
 }
 
-void TestFactory() {
+void TestFactoryMethod() {
     FactoryMethodShowcase factory;
     auto incorrectPowerUp = factory.FactoryMethod(ARMOR);
     assert(!incorrectPowerUp);
@@ -36,9 +37,20 @@ void TestFactory() {
     std::cout << "Factory method tests have passed\n";
 }
 
+void TestAbstractFactory() {
+    WarriorItemFactory warriorItemFactory;
+    MageItemFactory mageItemFactory;
+    auto weapon1 = warriorItemFactory.CreateWeapon();
+    assert(weapon1->GetName() == "Sword");
+    auto weapon2 = mageItemFactory.CreateWeapon();
+    assert(weapon2->GetName() == "Staff");
+    std::cout << "Abstract factory tests have passed\n";
+}
+
 int main(int argc, char* argv[])
 {
     TestSingleton();
-    TestFactory();
+    TestFactoryMethod();
+    TestAbstractFactory();
     return 0;
 }

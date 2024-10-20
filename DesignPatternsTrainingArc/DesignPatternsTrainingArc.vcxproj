@@ -154,11 +154,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AbstractFactory.cpp" />
     <ClCompile Include="DesignPatternsTrainingArc.cpp" />
     <ClCompile Include="FactoryMethodShowcase.cpp" />
     <ClCompile Include="Singleton.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AbstractFactory.h" />
     <ClInclude Include="FactoryMethodShowcase.h" />
     <ClInclude Include="Singleton.h" />
   </ItemGroup>
