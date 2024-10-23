@@ -6,8 +6,7 @@ enum PowerUpType {
     EMPTY,
     HEALTH,
     AMMO,
-    ARMOR,
-    COUNT
+    ARMOR
 };
 
 class PowerUp {

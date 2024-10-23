@@ -4,6 +4,7 @@
 #include <vector>
 
 #include "AbstractFactory.h"
+#include "CharacterBuilder.h"
 #include "FactoryMethodShowcase.h"
 #include "Singleton.h"
 
@@ -47,10 +48,20 @@ void TestAbstractFactory() {
     std::cout << "Abstract factory tests have passed\n";
 }
 
+void TestBuilder() {
+    CharacterBuilder builder;
+    builder.SetName("Alice");
+    builder.SetCharacterClass(MAGE);
+    auto character = builder.GetCharacter();
+    assert(character->name == "Alice");
+    std::cout << "Builder tests have passed\n";
+}
+
 int main(int argc, char* argv[])
 {
     TestSingleton();
     TestFactoryMethod();
     TestAbstractFactory();
+    TestBuilder();
     return 0;
 }
