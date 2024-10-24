@@ -6,6 +6,7 @@
 #include "AbstractFactory.h"
 #include "CharacterBuilder.h"
 #include "FactoryMethodShowcase.h"
+#include "NPC.h"
 #include "Singleton.h"
 
 void TestSingleton() {
@@ -57,11 +58,23 @@ void TestBuilder() {
     std::cout << "Builder tests have passed\n";
 }
 
+void TestPrototype() {
+    WarriorNPC npc;
+    npc.hp = 50;
+    npc.attackPower = 10;
+    npc.name = "Bob";
+    npc.characterClass = WARRIOR;
+    auto npc2 = npc.Clone();
+    assert(npc.name == npc2->name);
+    std::cout << "Prototype tests have passed\n";
+}
+
 int main(int argc, char* argv[])
 {
     TestSingleton();
     TestFactoryMethod();
     TestAbstractFactory();
     TestBuilder();
+    TestPrototype();
     return 0;
 }

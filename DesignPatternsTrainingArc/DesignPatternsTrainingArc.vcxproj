@@ -158,12 +158,14 @@
     <ClCompile Include="CharacterBuilder.cpp" />
     <ClCompile Include="DesignPatternsTrainingArc.cpp" />
     <ClCompile Include="FactoryMethodShowcase.cpp" />
+    <ClCompile Include="NPC.cpp" />
     <ClCompile Include="Singleton.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AbstractFactory.h" />
     <ClInclude Include="CharacterBuilder.h" />
     <ClInclude Include="FactoryMethodShowcase.h" />
+    <ClInclude Include="NPC.h" />
     <ClInclude Include="Singleton.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
