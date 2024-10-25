@@ -3,11 +3,11 @@
 #include <mutex>
 #include <vector>
 
-#include "AbstractFactory.h"
-#include "CharacterBuilder.h"
-#include "FactoryMethodShowcase.h"
-#include "NPC.h"
-#include "Singleton.h"
+#include "CreationalPatterns/AbstractFactory.h"
+#include "CreationalPatterns/CharacterBuilder.h"
+#include "CreationalPatterns/FactoryMethodShowcase.h"
+#include "CreationalPatterns/NPC.h"
+#include "CreationalPatterns/Singleton.h"
 
 void TestSingleton() {
     auto instance1 = Singleton::GetInstance();
